@@ -141,6 +141,28 @@ let a = { a: 1};
 let b = { b: 1};
 //map.set(1, "test"); // Error
 map.set( a, "testA");
-map.set( a, "testB");
+map.set( b, "testB");
+//console.log(map);
+//console.log(map.get(a));
+
+a = null;
 console.log(map);
-console.log(map.get(a));
+
+
+setTimeout(() => {
+    console.log(map);
+}, 2000);
+
+
+let cache = new WeakMap();
+
+function getValue(obj){
+    if (!cache.has(obj)){
+        const res = 1;
+        cache.set(obj, res)
+    }
+    return cache.get(obj);
+}
+
+const res = getValue(b);
+console.log(res);
