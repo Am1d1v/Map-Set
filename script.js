@@ -100,3 +100,21 @@ const weatherObj = {
 //console.log(Object.entries(weatherObj));
 const weatherNewMap = new Map (Object.entries(weatherObj));
 console.log(weatherNewMap);
+
+
+const weather = new Map([
+    ["Moscow", 10],
+    ["Paris", 8]
+]);
+
+for (let [key, keyValue] of weather){
+    //console.log(key);
+    //console.log(keyValue);
+    console.log(`Weather ${keyValue} in city ${key}`);
+}
+
+console.log([...weather]);
+
+console.log([...weather.keys()]);
+console.log([...weather.values()]);
+
