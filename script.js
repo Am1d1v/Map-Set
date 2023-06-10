@@ -102,6 +102,8 @@ const weatherNewMap = new Map (Object.entries(weatherObj));
 console.log(weatherNewMap);
 
 
+/*
+
 const weather = new Map([
     ["Moscow", 10],
     ["Paris", 8]
@@ -118,3 +120,16 @@ console.log([...weather]);
 console.log([...weather.keys()]);
 console.log([...weather.values()]);
 
+*/
+
+let weather = new Map([
+    ["Moscow", 10],
+    ["Paris", 8],
+    ["London", 5]
+]);
+
+//weather = [...weather].map(el => el.reverse());
+weather =  new Map ([...weather].map(el => el.reverse()));
+console.log(weather);
+//weather = new Map(weather);
+//console.log(weather);
