@@ -133,3 +133,14 @@ weather =  new Map ([...weather].map(el => el.reverse()));
 console.log(weather);
 //weather = new Map(weather);
 //console.log(weather);
+
+
+
+const map = new WeakMap();
+let a = { a: 1};
+let b = { b: 1};
+//map.set(1, "test"); // Error
+map.set( a, "testA");
+map.set( a, "testB");
+console.log(map);
+console.log(map.get(a));
