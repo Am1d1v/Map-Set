@@ -136,6 +136,8 @@ console.log(weather);
 
 
 
+//====== WeakMap ========================
+
 const map = new WeakMap();
 let a = { a: 1};
 let b = { b: 1};
@@ -166,3 +168,18 @@ function getValue(obj){
 
 const res = getValue(b);
 console.log(res);
+
+
+//======== WeakSet=============================
+
+let some1 = {some: 1};
+const some2 = {some: 2};
+
+const set = new WeakSet([some1, some2]);
+console.log(set);
+
+some1 = null;
+
+setTimeout(() => {
+    console.log(set);
+}, 5000);
